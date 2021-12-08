@@ -14,7 +14,7 @@
             ) {
 
                 setcookie("loged_in", true, time() + 86400, "/");
-                header('Location: /login.php');
+                header('Location: /');
                 
             } else {
                 $incorrect = true;
