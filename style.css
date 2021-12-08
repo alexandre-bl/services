@@ -24,7 +24,7 @@ input {
 
 #login #box {
     display: block;
-    padding: 15px;
+    padding: 7px;
     border: 1px solid var(--c1);
     border-radius: 30px;
     position: absolute;
