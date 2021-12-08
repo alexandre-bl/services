@@ -11,11 +11,11 @@
 
         <form id="box">
 
-            <label for="name">Username</label>
+            <label for="name">Username</label><br>
             <input type="text" name="name"><br>
 
-            <label for="password">Password</label>
-            <input type="text" name="password">
+            <label for="password">Password</label><br>
+            <input type="text" name="password"><br>
 
         </form>
 
