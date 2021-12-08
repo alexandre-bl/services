@@ -12,6 +12,16 @@ body, html {
     font-family: var(--ft);
 }
 
+input {
+    background-color: var(--c0);
+    border: 1px solid var(--c1);
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
 #login #box {
     display: block;
     width: 350px; height: 350px;
