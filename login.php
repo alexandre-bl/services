@@ -50,10 +50,10 @@
                 <p id="error">
                     <?php
                         if( $empty ) {
-                            echo "All field should be filled in."
+                            echo "All field should be filled in.";
                         } else {
                             if( $incorrect ) {
-                                echo "Either the username or the password are incorrect."
+                                echo "Either the username or the password are incorrect.";
                             }
                         }
                     ?>
