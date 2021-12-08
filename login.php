@@ -12,7 +12,7 @@
         <form id="box">
 
             <label for="name">Username</label>
-            <input type="text" name="name">
+            <input type="text" name="name"><br>
 
             <label for="password">Password</label>
             <input type="text" name="password">
