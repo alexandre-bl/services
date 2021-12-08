@@ -1,6 +1,6 @@
 <?php
 
-$db_user = " ";
-$db_pass = " ";
+$G_user = "testuser";
+$G_pass = "testpass";
 
 ?>
