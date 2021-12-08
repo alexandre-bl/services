@@ -1,6 +1,6 @@
 <?php
 
-setcookie("loged_in", true, time() + 86400, "/");
+setcookie("loged_in", false, time() + 86400, "/");
 
 if( !empty( $_COOKIE["loged_in"] ) ) {
 
