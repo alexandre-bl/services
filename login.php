@@ -9,7 +9,7 @@
 
     <body id="login">
 
-        <form id="box">
+        <form id="box" method="post">
 
             <h1 class="title">Login</h1>
 
