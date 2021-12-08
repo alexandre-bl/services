@@ -10,7 +10,7 @@
         if( !empty( $_POST["name"] ) and !empty( $_POST["password"] ) ) {
 
             if(
-                $_POST["name"] != $G_user or $_POST["password"] != $G_pass
+                $_POST["name"] == $G_user or $_POST["password"] == $G_pass
             ) {
 
                 setcookie("loged_in", true, time() + 86400, "/");
