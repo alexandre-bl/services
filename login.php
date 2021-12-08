@@ -9,13 +9,10 @@
 
         if( !empty( $_POST["name"] ) and !empty( $_POST["password"] ) ) {
 
-            $empty = false;
-
             if(
                 $_POST["name"] != $G_user or $_POST["password"] != $G_pass
             ) {
 
-                $incorrect = false;
                 setcookie("loged_in", true, time() + 86400, "/");
                 header('Location: /login.php');
                 
