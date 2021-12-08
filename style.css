@@ -18,6 +18,7 @@ input {
     border: 1px solid var(--c1);
     border-radius: 5px;
     margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 #login #box {

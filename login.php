@@ -15,7 +15,7 @@
             <input type="text" name="name"><br>
 
             <label for="password">Password</label><br>
-            <input type="text" name="password"><br>
+            <input type="password" name="password"><br>
 
         </form>
 
