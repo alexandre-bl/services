@@ -11,6 +11,8 @@
 
         <form id="box">
 
+            <h1 class="title">Log In</h1>
+
             <label for="name">Username</label><br>
             <input type="text" name="name"><br>
 
