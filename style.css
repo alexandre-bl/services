@@ -14,12 +14,10 @@ body, html {
 
 input {
     background-color: var(--c0);
+    color: var(--c1);
     border: 1px solid var(--c1);
     border-radius: 5px;
-}
-
-label {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 #login #box {
