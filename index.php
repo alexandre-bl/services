@@ -20,8 +20,8 @@ if( empty( $_COOKIE["loged_in"] ) ) {
     <body>
         <h1> Welcome back </h1>
         <?php echo exec('
-                curl "https://api.vultr.com/v2/account" \
-                -X GET \
-                -H "Authorization: Bearer '.$G_api.'"'
-            ); ?>        
+            curl "https://api.vultr.com/v2/account" \
+            -X GET \
+            -H "Authorization: Bearer '.$G_api.'"
+        '); ?>        
     </body>
