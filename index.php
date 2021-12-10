@@ -15,6 +15,11 @@ $results = json_decode( exec($cmd) );
 
 foreach( $results->domains as $domain ) {
     $domain->nodes = 0;
+    $domain->records = exec('
+        curl "https://api.vultr.com/v2/domains/'.$domain->domain.'/records" \
+        -X GET \
+        -H "Authorization: Bearer '.$G_api.'"
+    ');
 }
 
 ?>
@@ -51,8 +56,7 @@ foreach( $results->domains as $domain ) {
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
-                    <td>
-                        Test
+                    <td> 
                     </td>
                 </tr>
             <?php $i++; }; ?>
