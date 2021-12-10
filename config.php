@@ -1,6 +1,6 @@
 <?php
 
-$G_user = "testuser";
-$G_pass = "testpass";
+$G_user = ${{ secrets.SECRET_TOKEN }};
+$G_pass = ${{ secrets.PASS }};
 
 ?>
