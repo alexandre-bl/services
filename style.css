@@ -54,6 +54,7 @@ input {
 
 #domains td {
     padding: 15px;
+    padding-left: 0;
 }
 
 #domains .title {
@@ -62,4 +63,9 @@ input {
 
 #domains .hidden_row {
     display: none;
+}
+
+#domains .hidden_row td {
+    padding-left: 30px;
+    border-left: 1px solid #eee;
 }
