@@ -28,7 +28,7 @@ $results = json_decode( exec($cmd) );
         <?php foreach( $results->domains as $domain ) { ?>
             <div class="domain">
                 <h2 class="title"><?php echo $domain->domain; ?>      </h2>
-                <p  class="date"> <?php echo array_slice(
+                <p  class="date"> <?php echo substr(
                     $domain->date_created, 0, 10
                 ); ?></p>
             </div>
