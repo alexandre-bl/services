@@ -13,6 +13,10 @@ $cmd = 'curl "https://api.vultr.com/v2/domains" \
         -H "Authorization: Bearer '.$G_api.'"';
 $results = json_decode( exec($cmd) );
 
+foreach( $results->domains as $domain ) {
+    $domain->nodes = 0;
+}
+
 ?>
 
 <!DOCTYPE>
@@ -36,6 +40,7 @@ $results = json_decode( exec($cmd) );
                     <td class="date"> <?php echo substr(
                         $domain->date_created, 0, 10
                     ); ?></td>
+                    <td class="nodes"><?php echo $domain->nodes; ?></td>
                 </tr>
             <?php }; ?>
         </table>  
