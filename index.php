@@ -8,6 +8,11 @@ if( empty( $_COOKIE["loged_in"] ) ) {
 
 }
 
+$cmd = 'curl "https://api.vultr.com/v2/domains" \
+        -X GET \
+        -H "Authorization: Bearer '.$G_api.'"';
+$results = json_decode( exec($cmd) );
+
 ?>
 
 <!DOCTYPE>
@@ -22,10 +27,6 @@ if( empty( $_COOKIE["loged_in"] ) ) {
     <body>
         <h1> Welcome back </h1>
         <?php
-            $cmd = 'curl "https://api.vultr.com/v2/domains" \
-                    -X GET \
-                    -H "Authorization: Bearer '.$G_api.'"';
-            echo "<p>" . $cmd       . "</p>";
-            echo "<p>" . exec($cmd) . "</p>";
+            print_r($results);
         ?>        
     </body>
