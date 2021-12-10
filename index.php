@@ -35,14 +35,19 @@ foreach( $results->domains as $domain ) {
                 <th>Creation Date</th>
                 <th>Nodes</th>
             </tr>
-            <?php foreach( $results->domains as $domain ) { ?>
-                <tr class="domain">
+            <?php $i = 0; foreach( $results->domains as $domain ) { ?>
+                <tr onclick="showHideRow('hidden_row<?php echo $i; ?>');" class="domain">
                     <td class="title"><?php echo $domain->domain; ?></td>
                     <td class="date">( created <?php echo substr(
                         $domain->date_created, 0, 10
                     ); ?>,</td>
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
-            <?php }; ?>
+                <tr id="hidden_row<?php echo $i; ?>">
+                    <td>
+                        Test
+                    </td>
+                </tr>
+            <?php $i++; }; ?>
         </table>  
     </body>
