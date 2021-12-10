@@ -23,6 +23,7 @@ if( empty( $_COOKIE["loged_in"] ) ) {
             $cmd = 'curl "https://api.vultr.com/v2/domains" \
                     -X GET \
                     -H "Authorization: Bearer '.$G_api.'"';
-            echo exec($cmd);
+            echo "<p>" . $cmd       . "</p>";
+            echo "<p>" . exec($cmd) . "</p>";
         ?>        
     </body>
