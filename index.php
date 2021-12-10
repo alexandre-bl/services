@@ -66,7 +66,7 @@ foreach( $results->domains as $domain ) {
                         </tr>
                         <?php foreach( $domain->records as $record ) { ?>
                         <tr>
-                            <td><?php print_r($record); ?></td>
+                            <td><?php echo $record[0]->type; ?></td>
                             <td><?php echo $record->name; ?></td>
                             <td><?php echo $record->data; ?></td>
                         </tr>
