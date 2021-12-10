@@ -25,12 +25,18 @@ $results = json_decode( exec($cmd) );
     </head>
 
     <body>
-        <?php foreach( $results->domains as $domain ) { ?>
-            <div class="domain">
-                <h2 class="title"><?php echo $domain->domain; ?>      </h2>
-                <p  class="date"> <?php echo substr(
-                    $domain->date_created, 0, 10
-                ); ?></p>
-            </div>
-        <?php }; ?>        
+        <table id="domains">
+            <tr>
+                <th>Domain Name</th>
+                <th>Creation Date</th>
+            </tr>
+            <?php foreach( $results->domains as $domain ) { ?>
+                <tr class="domain">
+                    <td class="title"><?php echo $domain->domain; ?></td>
+                    <td class="date"> <?php echo substr(
+                        $domain->date_created, 0, 10
+                    ); ?></td>
+                </tr>
+            <?php }; ?>
+        </table>  
     </body>
