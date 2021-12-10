@@ -44,12 +44,16 @@ input {
     color: var(--c2);
 }
 
+#domains table {
+    margin: auto;
+}
+
 #domains th {
     display: none;
 }
 
 #domains td {
-    padding: 10px;
+    padding: 15px;
 }
 
 #domains .title {
