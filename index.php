@@ -43,7 +43,7 @@ foreach( $results->domains as $domain ) {
                     ); ?>,</td>
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
-                <tr id="hidden_row<?php echo $i; ?>">
+                <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
                     <td>
                         Test
                     </td>
