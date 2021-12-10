@@ -33,6 +33,7 @@ foreach( $results->domains as $domain ) {
             <tr>
                 <th>Domain Name</th>
                 <th>Creation Date</th>
+                <th>Nodes</th>
             </tr>
             <?php foreach( $results->domains as $domain ) { ?>
                 <tr class="domain">
