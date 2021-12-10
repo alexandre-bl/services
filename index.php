@@ -20,7 +20,6 @@ foreach( $results->domains as $domain ) {
         -X GET \
         -H "Authorization: Bearer '.$G_api.'"
     ') );
-    echo "<br>";
 }
 
 ?>
