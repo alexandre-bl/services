@@ -1,5 +1,7 @@
 <?php
 
+require_once "config.php";
+
 if( empty( $_COOKIE["loged_in"] ) ) {
 
     header('Location: /login.php');
