@@ -26,7 +26,10 @@ $results = json_decode( exec($cmd) );
 
     <body>
         <h1> Welcome back </h1>
-        <?php
-            print_r($results);
-        ?>        
+        <?php foreach( $results->domains as $domain ) { ?>
+            <div class="domain">
+                <h2 class="title"><?php echo $domain->domain; ?>      </h2>
+                <p  class="date"> <?php echo $domain->date_created; ?></p>
+            </div>
+        <?php }; ?>        
     </body>
