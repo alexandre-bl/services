@@ -43,3 +43,15 @@ input {
 #login #box #error {
     color: var(--c2);
 }
+
+#domains th {
+    display: none;
+}
+
+#domains td {
+    padding: 10px;
+}
+
+#domains .title {
+    font-size: 1.5rem;
+}

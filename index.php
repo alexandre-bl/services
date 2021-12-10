@@ -38,10 +38,10 @@ foreach( $results->domains as $domain ) {
             <?php foreach( $results->domains as $domain ) { ?>
                 <tr class="domain">
                     <td class="title"><?php echo $domain->domain; ?></td>
-                    <td class="date"> <?php echo substr(
+                    <td class="date"> Created <?php echo substr(
                         $domain->date_created, 0, 10
                     ); ?></td>
-                    <td class="nodes"><?php echo $domain->nodes; ?></td>
+                    <td class="nodes"><?php echo $domain->nodes; ?> nodes</td>
                 </tr>
             <?php }; ?>
         </table>  
