@@ -13,6 +13,7 @@ body, html {
     color: var(--c1);
     font-family: var(--ft);
     font-size: 1.05em;
+    margin: auto;
 }
 
 input {
