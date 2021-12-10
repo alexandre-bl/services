@@ -59,3 +59,7 @@ input {
 #domains .title {
     font-size: 1.5rem;
 }
+
+#domains .hidden_row {
+    display: none;
+}
