@@ -15,7 +15,7 @@ body, html {
     font-size: 1.05em;
     margin: auto;
     border: 1px solid var(--c1);
-    border-width: 0,1px,0,1px;
+    border-width: 0 1px 0 1px;
 }
 
 input {
