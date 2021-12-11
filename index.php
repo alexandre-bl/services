@@ -63,12 +63,13 @@ foreach( $results->domains as $domain ) {
                             <th>Data</th>
                         </tr>
                         <?php foreach( $domain->records as $record ) { ?>
-                        <tr>
-                            <td><?php echo $record[$i]->type; ?></td>
-                            <td><?php echo $record[$i]->name; ?></td>
-                            <td><?php echo $record[$i]->data; ?></td>
-                        </tr>
-                    <?php } ?> </table> </td>
+                            <tr>
+                                <td><?php echo $record[$i]->type; ?></td>
+                                <td><?php echo $record[$i]->name; ?></td>
+                                <td><?php echo $record[$i]->data; ?></td>
+                            </tr>
+                        <?php } ?> 
+                    </table> </td>
                 </tr>
             <?php $i++; }; ?>
         </table>  
