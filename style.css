@@ -35,10 +35,6 @@ a, a:visited {
     color: var(--c3);
 }
 
-.ar {
-    text-align: right;
-}
-
 #login #box {
     display: block;
     width: 250px;
@@ -64,6 +60,10 @@ a, a:visited {
     border-bottom: 1px solid var(--c1);
     width: calc( 100% - var(--padding)*2 );
     padding: var(--padding);
+}
+
+#navbar p {
+    float: right;
 }
 
 /*#domains {

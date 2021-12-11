@@ -49,7 +49,7 @@ foreach( $results->domains as $domain ) {
 
         <div id="navbar">
             <a href="/?logout=1"> Logout </a>
-            <p class="ar"> Welcome back <?php echo $G_user; ?> </p>
+            <p> Welcome back <?php echo $G_user; ?> </p>
         </div>
 
         <!--<table id="domains">
