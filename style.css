@@ -47,7 +47,6 @@ input {
 #domains table {
     margin: auto;
     width: var(--wd);
-    word-break: break-word;
 }
 
 #domains th {
@@ -58,6 +57,7 @@ input {
     padding: 15px;
     padding-left: 0;
     width: calc( var(--wd)/3 );
+    word-break: break-word;
 }
 
 #domains .title {
