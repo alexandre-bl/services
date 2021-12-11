@@ -43,9 +43,9 @@ foreach( $results->domains as $domain ) {
     <body>
         <table id="domains">
             <tr>
-                <th>Domain Name</th>
-                <th>Creation Date</th>
-                <th>Nodes</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
             </tr>
             <?php $i = 0; foreach( $results->domains as $domain ) { ?>
                 <tr onclick="showHideRow('hidden_row<?php echo $i; ?>');" class="domain">
