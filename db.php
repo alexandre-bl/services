@@ -9,7 +9,7 @@ if( $conn->connect_error ) {
 echo "Connected to database";
 
 $res = $conn->query(
-    "CREATE IF NOT EXISTS services"
+    "CREATE TABLE IF NOT EXISTS services"
 );
 if ($res === TRUE) {
     echo "Database created successfully";
