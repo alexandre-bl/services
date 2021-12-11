@@ -2,6 +2,10 @@
 
 require_once "config.php";
 
+if( !empty(  $_GET["logout"] ) ) {
+    setcookie("loged_in", false, time() + 86400, "/");
+}
+
 if( empty( $_COOKIE["loged_in"] ) ) {
 
     header('Location: /login.php');
@@ -43,7 +47,7 @@ foreach( $results->domains as $domain ) {
     <body>
 
         <div id="navbar">
-            <a> Leave </a>
+            <a href="/?logout=1"> Leave </a>
         </div>
 
         <!--<table id="domains">
