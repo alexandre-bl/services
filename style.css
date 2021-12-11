@@ -72,6 +72,10 @@ input {
 
 }
 
+#domains .nodes {
+    text-align: right;
+}
+
 #domains .title {
     font-size: 1.5rem;
 }
