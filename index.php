@@ -55,13 +55,13 @@ foreach( $results->domains as $domain ) {
                     ); ?>,</td>
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
-                <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
-                    <?php foreach( $domain->records as $record ) { ?>
+                <?php foreach( $domain->records as $record ) { ?>
+                    <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
                         <td><?php echo $record->type; ?></td>
                         <td><?php echo $record->name; ?></td>
                         <td><?php echo $record->data; ?></td>
-                    <?php } ?>
-                </tr>
+                    </tr>
+                <?php } ?>
             <?php $i++; }; ?>
         </table>  
     </body>
