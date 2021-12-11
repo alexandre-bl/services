@@ -9,12 +9,12 @@ if( $conn->connect_error ) {
 echo "Connected to database";
 
 $res = $conn->query(
-    "CREATE TABLE IF NOT EXISTS services"
+    "CREATE DATABASE IF NOT EXISTS services"
 );
 if ($res === TRUE) {
-    echo "Database created successfully";
+    echo "; Database created successfully";
 } else {
-    echo "Error creating database: " . $conn->error;
+    echo "; Error creating database: " . $conn->error;
 }
 
 $conn->close(); ?>
