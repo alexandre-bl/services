@@ -52,10 +52,10 @@ foreach( $results->domains as $domain ) {
                 <tr class="domain">
                     <td onclick="showHideRow('hidden_row<?php echo $i; ?>');" class="pm">+/-</td>
                     <td class="title"><?php echo $domain->domain; ?></td>
-                    <td class="date">( created <?php echo substr(
+                    <td></td>
+                    <td class="nodes">( created <?php echo substr(
                         $domain->date_created, 0, 10
-                    ); ?>,</td>
-                    <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
+                    ); ?>, <?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <?php foreach( $domain->records as $record ) { 
                     if(
