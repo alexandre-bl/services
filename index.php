@@ -20,7 +20,6 @@ foreach( $results->domains as $domain ) {
         -X GET \
         -H "Authorization: Bearer '.$G_api.'"
     ') );
-    echo "test";
 }
 
 ?>
@@ -48,7 +47,7 @@ foreach( $results->domains as $domain ) {
                 <th>Creation Date</th>
                 <th>Nodes</th>
             </tr>
-            <?php $i = 0; foreach( $results->domains as $domain ) { ?>
+            <?php $i = 0; foreach( $results->domains as $domain ) { echo $i; ?>
                 <tr onclick="showHideRow('hidden_row<?php echo $i; ?>');" class="domain">
                     <td class="title"><?php echo $domain->domain; ?></td>
                     <td class="date">( created <?php echo substr(
