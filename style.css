@@ -3,7 +3,7 @@
     --c0: #222;
     --c1: #ccc;
     --c2: #f55;
-    --c3: #55f;
+    --c3: #55e;
     --ft: Arial, Helvetica, Sans-serif;
 }
 
@@ -33,6 +33,10 @@ input {
 
 a, a:visited {
     color: var(--c3);
+}
+
+.ar {
+    text-align: right;
 }
 
 #login #box {
