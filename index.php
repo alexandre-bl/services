@@ -41,6 +41,11 @@ foreach( $results->domains as $domain ) {
     </head>
 
     <body>
+
+        <div id="navbar">
+            <a> Leave </a>
+        </div>
+
         <!--<table id="domains">
             <tr>
                 <th>0</th>
