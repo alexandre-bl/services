@@ -31,6 +31,8 @@ if( empty( $_COOKIE["loged_in"] ) ) {
             <p> Welcome back <?php echo ucwords( $G_user ); ?> </p>
         </div>
         
-        <?php require_once "db.php"; ?>
+        <div id="content">
+            <?php require_once "db.php"; ?>
+        </div>
 
     </body>

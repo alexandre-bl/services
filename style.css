@@ -67,6 +67,11 @@ a, a:visited {
     margin: 0;
 }
 
+#content {
+    width: 100%;
+    padding: 10px;
+}
+
 /*#domains {
     width: var(--wd);
     padding-bottom: 20px;
