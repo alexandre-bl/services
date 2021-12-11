@@ -11,10 +11,22 @@ echo "Connected to database";
 $res = $conn->query(
     "CREATE DATABASE IF NOT EXISTS services"
 );
-if ($res === TRUE) {
-    echo "; Database created successfully";
-} else {
+if ($res === FALSE) {
     echo "; Error creating database: " . $conn->error;
+}
+
+foreach( $Q_tables as $table ) {
+
+    $sql = "CREATE TABLE IF NOT EXISTS $table[0] ( ";
+    foreach( $table[1] as $col ) {
+        $sql .= ", ".$col[0]." ".$col[1];
+    }
+    $sql .= " )";
+
+    $res = $conn->query( $sql );
+    if ($res === FALSE) {
+        echo "; Error creating table: " . $conn->error;
+    }
 }
 
 $conn->close(); ?>
