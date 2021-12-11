@@ -19,7 +19,7 @@ foreach( $results->domains as $domain ) {
         curl "https://api.vultr.com/v2/domains/'.$domain->domain.'/records" \
         -X GET \
         -H "Authorization: Bearer '.$G_api.'"
-    ') )[0];
+    ') )->records;
 }
 
 ?>
