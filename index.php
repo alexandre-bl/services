@@ -14,12 +14,12 @@ $cmd = 'curl "https://api.vultr.com/v2/domains" \
 $results = json_decode( exec($cmd) );
 
 foreach( $results->domains as $domain ) {
-    $domain->nodes = 0;
     $domain->records = json_decode( exec('
         curl "https://api.vultr.com/v2/domains/'.$domain->domain.'/records" \
         -X GET \
         -H "Authorization: Bearer '.$G_api.'"
     ') )->records;
+    $domain->nodes = count( $domain->records );
 }
 
 ?>
