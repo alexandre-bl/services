@@ -2,7 +2,8 @@
     --wd: 800px;
     --c0: #222;
     --c1: #ccc;
-    --c2: #f00;
+    --c2: #f55;
+    --c3: #55f;
     --ft: Arial, Helvetica, Sans-serif;
 }
 
@@ -28,6 +29,10 @@ input {
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 1em;
+}
+
+a, a:visited {
+    color: var(--c3);
 }
 
 #login #box {
