@@ -1,6 +1,7 @@
 <?php
 
 require_once "config.php";
+require_once "db.php";
 
 if( !empty(  $_GET["logout"] ) ) {
     setcookie("loged_in", false, time() + 86400, "/");
