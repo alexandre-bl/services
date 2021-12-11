@@ -9,11 +9,13 @@ if( $conn->connect_error ) {
 echo "Connected to database";
 
 $res = $conn->query(
-    "CREATE DATABASE IF NOT EXISTS services"
+    "CREATE DATABASE IF NOT EXISTS $Q_db"
 );
 if ($res === FALSE) {
     echo "; Error creating database: " . $conn->error;
 }
+
+$res = $conn->query( "USE $Q_db" );
 
 foreach( $Q_tables as $table ) {
 
