@@ -6,7 +6,7 @@ if( $conn->connect_error ) {
     die("Connection to database failed: " . $conn->connect_error);
 }
 
-echo "Connected to database"
+echo "Connected to database";
 
 $conn->query(
     "CREATE IF NOT EXISTS services"
