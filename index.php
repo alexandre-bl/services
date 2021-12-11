@@ -47,7 +47,7 @@ foreach( $results->domains as $domain ) {
                 <th>Creation Date</th>
                 <th>Nodes</th>
             </tr>
-            <?php $i = 0; foreach( $results->domains as $domain ) { echo $i; ?>
+            <?php $i = 0; foreach( $results->domains as $domain ) { ?>
                 <tr onclick="showHideRow('hidden_row<?php echo $i; ?>');" class="domain">
                     <td class="title"><?php echo $domain->domain; ?></td>
                     <td class="date">( created <?php echo substr(
@@ -64,7 +64,7 @@ foreach( $results->domains as $domain ) {
                         </tr>
                         <?php foreach( $domain->records as $record ) { ?>
                             <tr>
-                                <td><?php echo $record->type; ?></td>
+                                <td><?php print_r( $record ); ?></td>
                                 <td><?php echo $record->name; ?></td>
                                 <td><?php echo $record->data; ?></td>
                             </tr>
