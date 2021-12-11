@@ -1,7 +1,6 @@
 <?php
 
 require_once "config.php";
-require_once "db.php";
 
 if( !empty(  $_GET["logout"] ) ) {
     setcookie("loged_in", false, time() + 86400, "/");
@@ -26,6 +25,8 @@ if( empty( $_COOKIE["loged_in"] ) ) {
     </head>
 
     <body>
+
+        <?php require_once "db.php"; ?>
 
         <div id="navbar">
             <a href="/?logout=1"> Logout </a>
