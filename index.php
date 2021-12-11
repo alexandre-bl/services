@@ -57,7 +57,11 @@ foreach( $results->domains as $domain ) {
                     ); ?>,</td>
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
-                <?php foreach( $domain->records as $record ) { ?>
+                <?php foreach( $domain->records as $record ) { 
+                    if( $record->type == "NS" ) {
+                        continue;
+                    };
+                ?>
                     <tr class="hidden_row<?php echo $i; ?> hidden_row">
                         <td></td>
                         <td class="type"><?php echo $record->type; ?></td>
