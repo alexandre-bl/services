@@ -56,20 +56,11 @@ foreach( $results->domains as $domain ) {
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
-                    <td> <table> 
-                        <tr>
-                            <th>Type</th>
-                            <th>Name</th>
-                            <th>Data</th>
-                        </tr>
-                        <?php foreach( $domain->records as $record ) { ?>
-                            <tr>
-                                <td><?php echo $record->type; ?></td>
-                                <td><?php echo $record->name; ?></td>
-                                <td><?php echo $record->data; ?></td>
-                            </tr>
-                        <?php } ?> 
-                    </table> </td>
+                    <?php foreach( $domain->records as $record ) { ?>
+                        <td><?php echo $record->type; ?></td>
+                        <td><?php echo $record->name; ?></td>
+                        <td><?php echo $record->data; ?></td>
+                    <?php } ?>
                 </tr>
             <?php $i++; }; ?>
         </table>  
