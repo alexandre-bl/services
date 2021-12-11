@@ -34,7 +34,7 @@ foreach( $results->domains as $domain ) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             function showHideRow(row) {
-                $("#" + row).toggle();
+                $("." + row).toggle();
             }
         </script>
 
@@ -56,7 +56,7 @@ foreach( $results->domains as $domain ) {
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <?php foreach( $domain->records as $record ) { ?>
-                    <tr id="hidden_row<?php echo $i; ?>" class="hidden_row">
+                    <tr class="hidden_row<?php echo $i; ?>" class="hidden_row">
                         <td><?php echo $record->type; ?></td>
                         <td><?php echo $record->name; ?></td>
                         <td><?php echo $record->data; ?></td>
