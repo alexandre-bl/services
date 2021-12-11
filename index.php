@@ -58,7 +58,10 @@ foreach( $results->domains as $domain ) {
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <?php foreach( $domain->records as $record ) { 
-                    if( $record->type == "NS" ) {
+                    if(
+                        $record->type == "NS" or \
+                        $record->type == "TEXT"
+                    ) {
                         continue;
                     };
                 ?>
