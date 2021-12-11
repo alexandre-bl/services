@@ -4,6 +4,7 @@ require_once "config.php";
 
 if( !empty(  $_GET["logout"] ) ) {
     setcookie("loged_in", false, time() + 86400, "/");
+    header('Location: /login.php');
 }
 
 if( empty( $_COOKIE["loged_in"] ) ) {
