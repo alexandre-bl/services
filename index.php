@@ -56,7 +56,7 @@ foreach( $results->domains as $domain ) {
                     <td class="nodes"><?php echo $domain->nodes; ?> nodes )</td>
                 </tr>
                 <?php foreach( $domain->records as $record ) { ?>
-                    <tr class="hidden_row<?php echo $i; ?>" class="hidden_row">
+                    <tr class="hidden_row<?php echo $i; ?> hidden_row">
                         <td><?php echo $record->type; ?></td>
                         <td><?php echo $record->name; ?></td>
                         <td><?php echo $record->data; ?></td>
