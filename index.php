@@ -59,7 +59,7 @@ foreach( $results->domains as $domain ) {
                 </tr>
                 <?php foreach( $domain->records as $record ) { 
                     if(
-                        $record->type == "NS" or $record->type == "TEXT"
+                        $record->type == "NS" or $record->type == "TXT"
                     ) {
                         continue;
                     };
