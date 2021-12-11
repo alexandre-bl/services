@@ -26,11 +26,11 @@ if( empty( $_COOKIE["loged_in"] ) ) {
 
     <body>
 
-        <?php require_once "db.php"; ?>
-
         <div id="navbar">
             <a href="/?logout=1"> Logout </a>
             <p> Welcome back <?php echo ucwords( $G_user ); ?> </p>
         </div>
         
+        <?php require_once "db.php"; ?>
+
     </body>
