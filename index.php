@@ -33,7 +33,7 @@ if( empty( $_COOKIE["loged_in"] ) ) {
         
         <div id="content">
 
-            <?php while( $row = $db->domain->fetch_assoc() ) {
+            <?php while( $row = $db->domains->fetch_assoc() ) {
                 echo $row["domain"];
             } ?>
 
