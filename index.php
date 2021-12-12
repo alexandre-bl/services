@@ -34,7 +34,7 @@ if( empty( $_COOKIE["loged_in"] ) ) {
         <div id="content">
 
             <?php
-                print_r( $db->domains )->fetch_assoc();
+                print_r( $db->domains->fetch_assoc() );
             ?>
 
         </div>
