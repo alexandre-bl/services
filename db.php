@@ -31,4 +31,7 @@ foreach( $Q_tables as $table ) {
     }
 }
 
+$db = new stdClass;
+$db->domains = $conn->query( "SELECT domain FROM domains" );
+
 $conn->close(); ?>

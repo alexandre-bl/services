@@ -32,6 +32,11 @@ if( empty( $_COOKIE["loged_in"] ) ) {
         </div>
         
         <div id="content">
+
+            <?php
+                print_r( $db->domains );
+            ?>
+
         </div>
 
     </body>
