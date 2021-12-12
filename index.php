@@ -37,6 +37,7 @@ if( empty( $_COOKIE["loged_in"] ) ) {
 
                 <div class="domain">
                     <h2> <?php echo $row["domain"]; ?> </h2>
+                    <p> <?php echo $row["description"]; ?> </p>
                 </div>
 
             <?php } ?>
