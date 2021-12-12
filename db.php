@@ -21,7 +21,10 @@ foreach( $Q_tables as $table ) {
 
     $sql = "CREATE TABLE IF NOT EXISTS $table[0] ( ";
     foreach( $table[1] as $col ) {
-        $sql .= ", ".$col[0]." ".$col[1];
+        if( $col == $table[1][0] ) {
+            $sql .= ", "
+        }
+        $sql .= $col[0]." ".$col[1];
     }
     $sql .= " )";
 
