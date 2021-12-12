@@ -27,7 +27,6 @@ foreach( $Q_tables as $table ) {
         $sql .= $col[0]." ".$col[1];
     }
     $sql .= " )";
-    echo $sql;
 
     $res = $conn->query( $sql );
     if ($res === FALSE) {
