@@ -34,7 +34,7 @@ if( empty( $_COOKIE["loged_in"] ) ) {
         <div id="content">
 
             <?php while( $row = $db->domain->fetch_assoc() ) {
-                echo "id: " . $row["id"]. $row["domain"];
+                echo $row["domain"];
             } ?>
 
         </div>
