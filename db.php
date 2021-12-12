@@ -19,12 +19,9 @@ $res = $conn->query( "USE $Q_db" );
 
 foreach( $Q_tables as $table ) {
 
-    $sql = "CREATE TABLE IF NOT EXISTS $table[0] ( ";
+    $sql = "CREATE TABLE IF NOT EXISTS $table[0] ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY";
     foreach( $table[1] as $col ) {
-        if( $col != $table[1][0] ) {
-            $sql .= ", ";
-        }
-        $sql .= $col[0]." ".$col[1];
+        $sql .= ", ".$col[0]." ".$col[1];
     }
     $sql .= " )";
 
