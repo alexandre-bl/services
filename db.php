@@ -22,7 +22,7 @@ foreach( $Q_tables as $table ) {
     $sql = "CREATE TABLE IF NOT EXISTS $table[0] ( ";
     foreach( $table[1] as $col ) {
         if( $col == $table[1][0] ) {
-            $sql .= ", "
+            $sql .= ", ";
         }
         $sql .= $col[0]." ".$col[1];
     }
