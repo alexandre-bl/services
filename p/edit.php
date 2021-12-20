@@ -24,17 +24,24 @@
             else { 
                 
                 $table_is = false;
-                foreach( $Q_tables as $table ) {
-                    if( $_GET["table"] == $table[0] ) {
+                $table = -1;
+                foreach( $Q_tables as $ ) {
+                    if( $_GET["table"] == $t[0] ) {
                         $table_is = true;
+                        $table = $t;
                     }
                 }
 
                 if( !$table_is ) { ?>
 
-                    <h4 class="error"> Error 404: Table `<?php echo $_GET["table"]; ?>` doesn't exist. </h2>
+                    <h2 class="error"> Error 404: Table `<?php echo $_GET["table"]; ?>` doesn't exist. </h2>
 
-                <?php }
+                <?php } else { ?>
+
+                    <h2> Table: <?php echo $table[0]; ?> </h2>
+                    <h2> Row: <?php echo (int)$_GET["row"]-1; ?> </h2>
+
+                <?php } 
 
             }
 
