@@ -33,7 +33,8 @@
 
     <head>
 
-        <link rel="stylesheet" href="style.css">
+        <title> Login </title>
+        <?php require_once "head.php"; ?>
 
     </head>
 

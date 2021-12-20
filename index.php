@@ -20,7 +20,8 @@ if( empty( $_COOKIE["loged_in"] ) ) {
 
     <head>
 
-        <link rel="stylesheet" href="style.css">
+        <title> AlexandreBL Services</title>
+        <?php require_once "head.php"; ?>
 
     </head>
 
