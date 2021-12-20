@@ -39,7 +39,7 @@
                 <?php } else { ?>
 
                     <h2> Table: <?php echo $table[0]; ?> </h2>
-                    <h2> Row: <?php echo $_GET["row"]; ?> </h2>
+                    <h2> Row: <?php echo (int)$_GET["row"]-1; ?> </h2>
 
                 <?php } 
 
