@@ -42,7 +42,7 @@
 
                         <?php 
                         
-                            $row = (int)$_GET["row"]-1;
+                            $row = (int)$_GET["row"];
                             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
                             foreach( $table[1] as $col ) { ?>
