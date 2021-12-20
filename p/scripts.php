@@ -1,4 +1,4 @@
-<?php require_once "blocks/cookies.php"; ?>
+<?php require_once "../blocks/cookies.php"; ?>
 
 <!DOCTYPE>
 <html>
@@ -6,13 +6,13 @@
     <head>
 
         <title> AlexandreBL Services - Scripts </title>
-        <?php require_once "blocks/head.php"; ?>
+        <?php require_once "../blocks/head.php"; ?>
 
     </head>
 
     <body>
 
-        <?php require_once "blocks/navbar.php"; ?>
+        <?php require_once "../blocks/navbar.php"; ?>
         
         <div id="content">
         </div>
