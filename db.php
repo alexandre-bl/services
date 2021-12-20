@@ -33,6 +33,13 @@ $Q_tables = [
             ["size",     "INT(16)"],
             ["attached", "INT(6)"]
         ]
+    ],
+    [
+        "types",
+        [
+            ["name",     "VARCHAR(32)"],
+            ["script",     "VARCHAR(64)"]
+        ]
     ]
 
 ];
