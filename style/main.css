@@ -84,6 +84,11 @@ a, a:visited {
     padding: 10px;
 }
 
+#content .edit {
+    float: right;
+    margin-right: 30px;
+}
+
 /*#domains {
     width: var(--wd);
     padding-bottom: 20px;
