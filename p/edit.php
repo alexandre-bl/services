@@ -43,12 +43,12 @@
                         <?php 
                         
                             $row = (int)$_GET["row"]-1;
-                            $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" );
+                            $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
                             foreach( $table[1] as $col ) { ?>
 
                                 <label for="<?php echo $col[0]; ?>"><?php echo $col[0]; ?></label><br>
-                                <input type="text" name="<?php echo $col[0]; ?>" value="<?php echo $res->fetch_assoc()[$col[0]]; ?>"><br>
+                                <input type="text" name="<?php echo $col[0]; ?>" value="<?php echo $res[$col[0]]; ?>"><br>
 
                             <?php } 
                         
