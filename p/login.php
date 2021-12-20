@@ -68,6 +68,8 @@
 
         </form>
 
+        <?php require_once "../blocks/navbar.php"; ?>
+
     </body>
 
 </html>
