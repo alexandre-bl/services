@@ -18,7 +18,7 @@
 
             if( empty( $_GET["table"] ) or empty( $_GET["row"] ) ) { ?>
 
-                <h2> Error 400: Bad Request </h2>
+                <h2 class="error"> Error 400: Bad Request </h2>
 
             <?php }
 

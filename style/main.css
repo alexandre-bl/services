@@ -35,6 +35,10 @@ a, a:visited {
     color: var(--c3);
 }
 
+.error {
+    color: var(--c2);
+}
+
 #login #box {
     display: block;
     width: 250px;
