@@ -40,6 +40,13 @@
 
                     <form>
 
+                        <?php foreach( $table[1] as $col ) { ?>
+
+                            <label for="<?php echo $col[0]; ?>"><?php echo $col[0]; ?></label><br>
+                            <input type="text" name="<?php echo $col[0]; ?>"><br>
+
+                        <?php } ?>
+
                         <input type="submit" value="Save">
 
                     <form>
