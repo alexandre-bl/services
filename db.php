@@ -1,5 +1,42 @@
 <?php
 
+$Q_tables = [
+    [
+        "servers",
+        [
+            ["ip",   "BINARY(4)"], # https://stackoverflow.com/questions/1385552/datatype-for-storing-ip-address-in-sql-server#1385701
+            ["type", "INT(6)"],
+            ["user", "VARCHAR(32)"],
+            ["pass", "VARCHAR(64)"]
+        ]
+    ],
+    [
+        "nodes",
+        [
+            ["type",   "INT(6)"],
+            ["domain", "INT(6)"],
+            ["sub",    "VARCHAR(8)"],
+            ["strg",   "INT(6)"]
+        ]
+    ],
+    [
+        "domains",
+        [
+            ["domain",      "VARCHAR(32)"],
+            ["description", "VARCHAR(128)"],
+        ]
+    ],
+    [
+        "storage",
+        [
+            ["name",     "VARCHAR(8)"],
+            ["size",     "INT(16)"],
+            ["attached", "INT(6)"]
+        ]
+    ]
+
+];
+
 $conn = new mysqli("localhost", $Q_user, $Q_pass) or die("Connection to database failed: " . $conn->connect_error);
 
 if( $conn->connect_error ) {
@@ -33,5 +70,6 @@ foreach( $Q_tables as $table ) {
 
 $db = new stdClass;
 $db->domains = $conn->query( "SELECT * FROM domains" );
+$db->nodes = $conn->query( "SELECT * FROM nodes" );
 
 $conn->close(); ?>
