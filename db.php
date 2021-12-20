@@ -81,4 +81,4 @@ $db = new stdClass;
 $db->domains = $conn->query( "SELECT * FROM domains" );
 $db->nodes = $conn->query( "SELECT * FROM nodes" );
 
-$conn->close(); ?>
+?>
