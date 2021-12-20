@@ -62,6 +62,10 @@ a, a:visited {
     padding: var(--padding);
 }
 
+#navbar #logout {
+    color: var(--c2);
+}
+
 #navbar a {
     margin-right: 10px;
 }
