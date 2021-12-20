@@ -34,11 +34,11 @@ if( empty( $_COOKIE["loged_in"] ) ) {
         
         <div id="content">
 
-            <?php while( $row = $db->domains->fetch_assoc() ) { ?>
+            <?php while( $row = $db->domains->mysql_fetch_assoc() ) { ?>
 
                 <div class="domain">
                     <h2> <?php echo $row["domain"]; ?> </h2>
-                    <p> <?php echo $row["id"]; ?> </p>
+                    <p> <?php echo $row["description"]; ?> </p>
                 </div>
 
             <?php } ?>
