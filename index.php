@@ -1,19 +1,4 @@
-<?php
-
-require_once "config.php";
-
-if( !empty(  $_GET["logout"] ) ) {
-    setcookie("loged_in", false, time() + 86400, "/");
-    header('Location: /login.php');
-}
-
-if( empty( $_COOKIE["loged_in"] ) ) {
-
-    header('Location: /login.php');
-
-}
-
-?>
+<?php require_once "blocks/cookies.php"; ?>
 
 <!DOCTYPE>
 <html>
@@ -21,16 +6,13 @@ if( empty( $_COOKIE["loged_in"] ) ) {
     <head>
 
         <title> AlexandreBL Services</title>
-        <?php require_once "head.php"; ?>
+        <?php require_once "blocks/head.php"; ?>
 
     </head>
 
     <body>
 
-        <div id="navbar">
-            <a href="/?logout=1"> Logout </a>
-            <p> <?php require_once "db.php"; ?> </p>
-        </div>
+        <?php require_once "blocks/navbar.php"; ?>
         
         <div id="content">
 

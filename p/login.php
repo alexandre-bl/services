@@ -33,8 +33,8 @@
 
     <head>
 
-        <title> Login </title>
-        <?php require_once "head.php"; ?>
+        <title> AlexandreBL Services - Login </title>
+        <?php require_once "blocks/head.php"; ?>
 
     </head>
 
