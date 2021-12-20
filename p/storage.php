@@ -6,13 +6,13 @@
     <head>
 
         <title> AlexandreBL Services - Storage </title>
-        <?php require_once "blocks/head.php"; ?>
+        <?php require_once "../blocks/head.php"; ?>
 
     </head>
 
     <body>
 
-        <?php require_once "blocks/navbar.php"; ?>
+        <?php require_once "../blocks/navbar.php"; ?>
         
         <div id="content">
         </div>
