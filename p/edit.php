@@ -14,6 +14,17 @@
 
         <?php require_once "../blocks/navbar.php"; ?>
         
-        <div id="content"> </div>
+        <div id="content"> <?php
+
+            if( empty( $_GET["table"] ) or empty( $_GET["row"] ) ) { ?>
+
+                <h2 class="error"> Error 400: Bad Request. </h2>
+
+            <?php }
+            else { 
+
+            }
+
+        ?> </div>
 
     </body>
