@@ -1,4 +1,4 @@
-<?php require_once "blocks/cookies.php"; ?>
+<?php require_once "../blocks/cookies.php"; ?>
 
 <!DOCTYPE>
 <html>
