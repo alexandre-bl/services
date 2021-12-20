@@ -16,11 +16,11 @@
         
         <div id="content">
 
-            <?php while( $dom = $db->domains->fetch_assoc() ) { ?>
+            <?php $i = 0; while( $dom = $db->domains->fetch_assoc() ) { $i += 1; ?>
 
                 <div class="domain">
 
-                    <h2> <?php echo $dom["domain"]; ?> </h2>
+                    <h2> <?php echo $dom["domain"]; ?> </h2> <a class="edit" href="/p/edit.php?table=domains&row=<?php echo $i; ?>"> Edit </a>
                     <p> <?php echo $dom["description"]; ?> </p>
 
                     <?php 
