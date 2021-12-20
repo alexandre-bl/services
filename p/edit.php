@@ -43,7 +43,7 @@
                         <?php 
                         
                             $row = (int)$_GET["row"]-1;
-                            $res = $conn->query( "SELECT * FROM domains WHERE `id` IN($row)" );
+                            $res = $conn->query( "SELECT * FROM domains" );
 
                             foreach( $table[1] as $col ) { ?>
 
