@@ -36,10 +36,13 @@
 
                     <h2 class="error"> Error 404: Table `<?php echo $_GET["table"]; ?>` doesn't exist. </h2>
 
-                <?php } else { ?>
+                <?php } else { ?> 
 
-                    <h2> Table: <?php echo $table[0]; ?> </h2>
-                    <h2> Row: <?php echo (int)$_GET["row"]-1; ?> </h2>
+                    <form>
+
+                        <input type="submit" value="Save">
+
+                    <form>
 
                 <?php } 
 
