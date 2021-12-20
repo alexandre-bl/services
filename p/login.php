@@ -34,7 +34,7 @@
     <head>
 
         <title> AlexandreBL Services - Login </title>
-        <?php require_once "blocks/head.php"; ?>
+        <?php require_once "../blocks/head.php"; ?>
 
     </head>
 
