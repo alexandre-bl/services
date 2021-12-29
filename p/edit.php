@@ -42,6 +42,8 @@
             $row = (int)$_POST["row"];
             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
+            print_r($res);
+
             if( $res ) {
                 #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
             }
