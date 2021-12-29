@@ -1,5 +1,49 @@
 <?php require_once "../blocks/cookies.php"; ?>
 
+<?php
+
+    if(
+         isset($_GET["update"]) and /
+        isset($_POST["table"]) and /
+        isset($_POST["row"])
+    ){
+
+        $table = -1;
+        foreach( $Q_tables as $t ) {
+            if( $_GET["table"] == $t[0] ) {
+                $table_is = true;
+                $table = $t[1];
+            }
+        }
+
+        $cols = true;
+        foreach( $table as $col ) {
+            if( !isset($_POST[$col]) ) {
+                $cols = false;
+            }
+        }
+
+        if( $cols ) {
+
+            $sql  = "UPDATE ". $_POST[$table] ." SET ";
+            foreach( $table as $col ) {
+
+                if( $col != $table[0] ) {
+                    $sql .= ", ";
+                }
+
+                $sql .= "$col = '". $_POST[$col] ."'";
+            }
+            $sql .= " WHERE id=".$_POST["row"]
+
+            $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
+
+        }
+
+    }
+
+?>
+
 <!DOCTYPE>
 <html>
 
@@ -28,7 +72,7 @@
                 foreach( $Q_tables as $t ) {
                     if( $_GET["table"] == $t[0] ) {
                         $table_is = true;
-                        $table = $t;
+                        $table = $t[1];
                     }
                 }
 
@@ -40,12 +84,15 @@
 
                     <form action="/p/edit.php?update=1" method="post">
 
+                        <input type="hidden" name="table"  value="<?php echo $_GET["table"]; ?>">
+                        <input type="hidden" name="row"    value="<?php echo $_GET["row"];   ?>">
+
                         <?php 
                         
                             $row = (int)$_GET["row"];
                             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
-                            foreach( $table[1] as $col ) { ?>
+                            foreach( $table as $col ) { ?>
 
                                 <label for="<?php echo $col[0]; ?>"><?php echo $col[0]; ?></label><br>
                                 <input type="text" name="<?php echo $col[0]; ?>" value="<?php echo $res[$col[0]]; ?>"><br>
