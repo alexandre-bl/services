@@ -40,7 +40,7 @@
             echo $sql."<br>";
 
             $row = (int)$_POST["row"];
-            $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
+            $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" );
 
             print_r($res);
 
