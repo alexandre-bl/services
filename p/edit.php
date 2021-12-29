@@ -44,6 +44,7 @@
             $res = $conn->query( $sql );
 
             if( $res ) {
+                echo "test1";
                 #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
             }
 
