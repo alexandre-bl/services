@@ -27,7 +27,6 @@
 
         if( $cols ) {
 
-            echo "test";
 
             $sql  = "UPDATE ". $_POST["table"] ." SET ";
             foreach( $table as $col ) {
@@ -43,6 +42,7 @@
             $row = (int)$_POST["row"];
             $res = $conn->query( $sql );
 
+            echo "test1";
             if( $res ) {
                 echo "test1";
                 #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
