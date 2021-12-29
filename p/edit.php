@@ -2,9 +2,12 @@
 
 <?php
 
-    if(
-        isset($_GET["update"]) and isset($_POST["table"]) and isset($_POST["row"])
-    ){
+    # PHP settings 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    if( isset($_GET["update"]) and isset($_POST["table"]) and isset($_POST["row"]) ){
 
         $table = -1;
         foreach( $Q_tables as $t ) {
