@@ -1,4 +1,5 @@
 <?php require_once "../blocks/cookies.php"; ?>
+<?php require_once "../db.php"; ?>
 
 <?php
 
