@@ -10,8 +10,6 @@
 
     if( isset($_GET["update"]) and isset($_POST["table"]) and isset($_POST["row"]) ){
 
-        echo "test";
-
         $table = -1;
         foreach( $Q_tables as $t ) {
             if( $_POST["table"] == $t[0] ) {
@@ -28,6 +26,8 @@
         }
 
         if( $cols ) {
+
+            echo "test";
 
             $sql  = "UPDATE ". $_POST["table"] ." SET ";
             foreach( $table as $col ) {
