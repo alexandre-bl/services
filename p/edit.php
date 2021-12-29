@@ -10,6 +10,8 @@
 
     if( isset($_GET["update"]) and isset($_POST["table"]) and isset($_POST["row"]) ){
 
+        echo "test";
+
         $table = -1;
         foreach( $Q_tables as $t ) {
             if( $_POST["table"] == $t[0] ) {
@@ -40,8 +42,6 @@
 
             $row = (int)$_POST["row"];
             $res = $conn->query( $sql );
-
-            print_r($res);
 
             if( $res ) {
                 #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
