@@ -34,7 +34,7 @@
                     $sql .= ", ";
                 }
 
-                $sql .= "$col[0] = '". $_POST[$col] ."'";
+                $sql .= "$col[0] = '". $_POST[$col[0]] ."'";
             }
             $sql .= " WHERE id=".$_POST["row"];
 
