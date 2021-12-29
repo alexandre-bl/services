@@ -12,7 +12,7 @@
 
         $table = -1;
         foreach( $Q_tables as $t ) {
-            if( $_GET["table"] == $t[0] ) {
+            if( $_POST["table"] == $t[0] ) {
                 $table_is = true;
                 $table = $t[1];
             }
