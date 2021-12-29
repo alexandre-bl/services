@@ -27,7 +27,7 @@
 
         if( $cols ) {
 
-            $sql  = "UPDATE ". $_POST[$table] ." SET ";
+            $sql  = "UPDATE ". $_POST[$table[0]] ." SET ";
             foreach( $table as $col ) {
 
                 if( $col != $table[0] ) {
