@@ -39,10 +39,9 @@
             }
             $sql .= " WHERE id=".$_POST["row"];
 
-            $row = (int)$_POST["row"];
             $res = $conn->query( $sql );
 
-            echo "test1";
+            print_r( $res );
             if( $res ) {
                 echo "test1";
                 #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
