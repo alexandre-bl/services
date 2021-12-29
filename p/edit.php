@@ -42,7 +42,7 @@
             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
             if( $res ) {
-                header('Location: /p/edit.php');
+                header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
             }
 
         }
