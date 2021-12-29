@@ -41,8 +41,10 @@
             $row = (int)$_POST["row"];
             $res = $conn->query( $sql );
 
+            print_r($res);
+
             if( $res ) {
-                header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
+                #header("Location: /p/edit.php?table=".$_POST["table"]."&row=".$_POST["row"]);
             }
 
         }
