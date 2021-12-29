@@ -38,7 +38,7 @@
 
                 <?php } else { ?> 
 
-                    <form>
+                    <form action="/p/edit.php?update=1" method="post">
 
                         <?php 
                         
