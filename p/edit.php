@@ -37,7 +37,7 @@
                 $sql .= "$col[0] = '". $_POST[$col[0]] ."'";
             }
             $sql .= " WHERE id=".$_POST["row"];
-            echo $sql;
+            echo $sql."<br>";
 
             $row = (int)$_POST["row"];
             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
