@@ -110,5 +110,6 @@
         ?> </div>
 
         <?php require_once "../blocks/navbar.php"; ?>
+        <?php require_once "blocks/footer.php"; ?>
 
     </body>
