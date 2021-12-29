@@ -3,9 +3,7 @@
 <?php
 
     if(
-         isset($_GET["update"]) and /
-        isset($_POST["table"]) and /
-        isset($_POST["row"])
+        isset($_GET["update"]) and isset($_POST["table"]) and isset($_POST["row"])
     ){
 
         $table = -1;
