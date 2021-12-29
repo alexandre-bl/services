@@ -20,7 +20,7 @@
 
         $cols = true;
         foreach( $table as $col ) {
-            if( !isset($_POST[$col]) ) {
+            if( !isset($_POST[$col[0]]) ) {
                 $cols = false;
             }
         }
