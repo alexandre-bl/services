@@ -42,7 +42,7 @@
             $res = $conn->query( "SELECT * FROM domains WHERE id IN($row)" )->fetch_assoc();
 
             if( $res ) {
-                header('Location: /');
+                header('Location: /p/edit.php');
             }
 
         }
